@@ -7,4 +7,22 @@ const Box = x => ({
     inspect: () => `Box(${x})`  // custom output (deprecated)
 });
 
-module.exports = { Box };
+const Right = x => ({
+    map: f => Right(f(x)),  // just like Box
+    chain: f => f(x),
+    fold: (f, g) => g(x),   // calls right function
+    inspect: () => `Right(${x})`  // custom output (deprecated)
+});
+
+const Left = x => ({
+    map: f => Left(x),  // simply doesn't do anything
+    chain: f => Left(x),  // simply doesn't do anything
+    fold: (f, g) => f(x),   // calls left function
+    inspect: () => `Left(${x})`  // custom output (deprecated)
+});
+
+const Nullable = x =>
+    x != null ? Right(x) : Left(x);
+
+
+module.exports = { Box, Left, Nullable, Right };
