@@ -25,4 +25,14 @@ const Nullable = x =>
     x != null ? Right(x) : Left(x);
 
 
-module.exports = { Box, Left, Nullable, Right };
+const tryCatch = f =>
+{
+    try {
+        return Right(f());
+    }
+    catch(e) {
+        return Left(e);
+    }
+};
+
+module.exports = { Box, Left, Nullable, Right, tryCatch };
