@@ -3,6 +3,7 @@ const Box = x => ({
 
     map:  f  => Box(f(x)), // calls function and returns new box
     fold: f  => f(x),      // calls function and returns raw result
+    chain: f => f(x),
     get:  () => x,         // returns raw result
     inspect: () => `Box(${x})`  // custom output (deprecated)
 });
