@@ -32,3 +32,8 @@ A function that takes multiple arguments one at a time.
 A function with three paramters will first take one argument,
 return a function that takes the next argument, returning a
 function that takes the third argument.
+
+## Applicative functor
+A functor with an ap(ply) method.
+Laws:
+- F(x).map(f) == F(f)ap(F(x))

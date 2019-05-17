@@ -5,7 +5,8 @@ const Box = x => ({
     fold: f  => f(x),      // calls function and returns raw result
     chain: f => f(x),
     get:  () => x,         // returns raw result
-    inspect: () => `Box(${x})`  // custom output (deprecated)
+    inspect: () => `Box(${x})`,  // custom output (deprecated)
+    ap: b2 => b2.map(x)
 });
 
 const Right = x => ({
