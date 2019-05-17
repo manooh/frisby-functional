@@ -12,3 +12,7 @@ Safe operation. Always returns something.
 A type with a map method. It must obey a few laws:
 - Function composition preservation: fx.map(f).map(g) == fx.map(x => g(f(x)))
 - fx.map(id) == id(fx)
+
+## Lifting a value into a type
+Using the .of() interface instead of constructor
+Object is then ready for map/chain or other operations
