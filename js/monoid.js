@@ -87,4 +87,4 @@ const Pair = (x, y) => ({
 });
 
 
-module.exports = { Sum, Product, Any, Max, Min, Right, Left, First, Pair}; 
+module.exports = { Sum, Product, Any, Max, Min, Right, Left, First, Pair};
