@@ -46,3 +46,7 @@ Simply: type conversion, from one Functor to another (a structural change).
 More precicely: a Functor where this is true:
 nt(x).map(f) == nt(x.map(f))
 
+## Isomorphism
+Pair of functions, to() and from(), where:
+- from(to(x)) == x, and
+- to(from(x)) == y
