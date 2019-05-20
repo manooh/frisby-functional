@@ -40,3 +40,9 @@ Laws:
 
 ## List comprehension
 Creating a list based on existing lists.
+
+## Natural transformation
+Simply: type conversion, from one Functor to another (a structural change).
+More precicely: a Functor where this is true:
+nt(x).map(f) == nt(x.map(f))
+
