@@ -37,3 +37,6 @@ function that takes the third argument.
 A functor with an ap(ply) method.
 Laws:
 - F(x).map(f) == F(f)ap(F(x))
+
+## List comprehension
+Creating a list based on existing lists.
